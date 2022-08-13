@@ -1,5 +1,4 @@
-
-
+/*
 
 function datosProdutos(
   precioNetoProducto,
@@ -45,43 +44,18 @@ const buscarPrecio = produtosCargados.find((el) => el.precio === "400")
 
 console.log(buscarNombre) ;
 
-console.log(buscarPrecio) ;
+console.log(buscarPrecio) ; */
 
- 
+let price = document.querySelector("#price");
+let output = document.querySelector(".price-output");
 
+  output.textContent = price.value;
 
+  price.addEventListener("input", function () {
+    output.textContent = price.value;
+    document.querySelector("#salidaPrecio").innerText = salidaPrecios.innerText;
+  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  let salidaPrecios = output;
 
 
