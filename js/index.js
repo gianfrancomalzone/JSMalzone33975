@@ -1,5 +1,3 @@
-/*
-
 function datosProdutos(
   precioNetoProducto,
   porcentajeImpuestos,
@@ -23,7 +21,7 @@ const producto1 = new producto ("Latex 1L", precioCF, 10, 5)
 
 console.log (producto1);
 
-const listaProductosFaltantes = [];
+let listaProductosFaltantes = [];
 let cantidadProductosFaltantes = +prompt("Ingresa la cantidad de productos faltantes.");
 
 do {
@@ -44,7 +42,7 @@ const buscarPrecio = produtosCargados.find((el) => el.precio === "400")
 
 console.log(buscarNombre) ;
 
-console.log(buscarPrecio) ; */
+console.log(buscarPrecio) ;
 
 let price = document.querySelector("#price");
 let output = document.querySelector(".price-output");
