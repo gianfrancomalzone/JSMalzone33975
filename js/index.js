@@ -1,4 +1,4 @@
-function datosProdutos(
+/* function datosProdutos(
   precioNetoProducto,
   porcentajeImpuestos,
   porcentajeGanarcia,
@@ -55,5 +55,38 @@ let output = document.querySelector(".price-output");
   });
 
   let salidaPrecios = output;
+      <output class="price-output" for="price"></output>
 
+*/
+
+if(navigator.geolocation){
+  console.log("IP")
+}else{
+  console.log("error")
+}
+
+if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(pasoUno, errorPasoUno);
+}else{
+  console.log("error en paso 1")
+}
+
+function pasoUno(geolocationPosition){
+ let coords = geolocationPosition.coords;
+ document.getElementById("#codigoPostal").innerHTML = "Lat:" + coords.latitude + "<br>" + "Lon:" + coords.longitude;
+}
+
+function errorPasoUno(error) {
+  console.log(error)
+  alert("Por favor, conceda los permisos necesarios para seguir navegando.")
+  
+  window.onload = () => {
+    setTimeout(() => {
+      console.log("Por favor, conceda los permisos necesarios para seguir navegando.")
+    }, 3000);
+  } ;
+
+  location.reload()
+
+}
 
