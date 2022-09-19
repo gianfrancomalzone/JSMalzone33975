@@ -1,318 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css">
+  <title>Hamburqueseria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <span class="fs-4">Pintureria M.M.S</span>
+        <span class="fs-4">Hamburguesas "la delicia"</span>
       </a>
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
-        <!--
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li> -->
+      <ul class="nav nav-pills mb-3 py-3 container" id="pills-tab" role="tablist">
+        <li class="nav-item text-primary" role="presentation">
+          <a class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+            role="tab" aria-controls="pills-home" aria-selected="true">Inicio</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Productos</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
+            role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</a>
+        </li>
       </ul>
     </header>
   </div>
-  <div class="container pb-5 mt-n2 mt-md-n3"> <!-- Productos * -->
-    <div class="row">
-      <div class="col-xl-9 col-md-8">
-        <h2 class="h6 d-flex flex-wrap justify-content-between align-items-center px-4 py-3 bg-secondary">
-          <span>Productos</span><a class="font-size-sm" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" class="feather feather-chevron-left" style="width: 1rem; height: 1rem">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>Continuar comprando</a>
-        </h2>
-        <div class="d-sm-flex justify-content-between my-4 pb-4 border-bottom">  <!-- Productos * -->
-          <div class="media d-block d-sm-flex text-center text-sm-left">
-            <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img
-                src="img/example240x240.jpeg" alt="Product"></a>
-            <div class="media-body pt-3">
-              <h3 class="product-card-title font-weight-semibold border-0 pb-0">
-                <a href="#">Hauman</a>
-              </h3>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Litros:</span>20
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Color:</span>Racismo
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Terminación:</span>De tu casa
-              </div>
-              <div class="font-size-lg text-primary pt-2">$15.00</div>
-            </div>
-          </div>
-          <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem">
-            <div class="form-group mb-2">
-              <label for="quantity1">Cantidad</label>
-              <input class="form-control form-control-sm" type="number" id="quantity1" value="1" />
-            </div>
-            <button class="btn btn-outline-secondary btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-refresh-cw mr-1">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>Añadir al carrito
-            </button>
-            <button class="btn btn-outline-danger btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-trash-2 mr-1">
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                <line x1="10" y1="11" x2="10" y2="17"></line>
-                <line x1="14" y1="11" x2="14" y2="17"></line>
-              </svg>Eliminar
-            </button>
-          </div>
-        </div>  <!-- * Productos -->
-        <div class="d-sm-flex justify-content-between my-4 pb-4 border-bottom"> <!-- Productos * -->
-          <div class="media d-block d-sm-flex text-center text-sm-left">
-            <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img
-                src="img/example240x240.jpeg" alt="Product"></a>
-            <div class="media-body pt-3">
-              <h3 class="product-card-title font-weight-semibold border-0 pb-0">
-                <a href="#">Hauman</a>
-              </h3>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Litros:</span>20
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Color:</span>Racismo
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Terminación:</span>De tu casa
-              </div>
-              <div class="font-size-lg text-primary pt-2">$15.00</div>
-            </div>
-          </div>
-          <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem">
-            <div class="form-group mb-2">
-              <label for="quantity1">Cantidad</label>
-              <input class="form-control form-control-sm" type="number" id="quantity1" value="1" />
-            </div>
-            <button class="btn btn-outline-secondary btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-refresh-cw mr-1">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>Añadir al carrito
-            </button>
-            <button class="btn btn-outline-danger btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-trash-2 mr-1">
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                <line x1="10" y1="11" x2="10" y2="17"></line>
-                <line x1="14" y1="11" x2="14" y2="17"></line>
-              </svg>Eliminar
-            </button>
-          </div>
-        </div> <!-- * Productos -->
-        <div class="d-sm-flex justify-content-between my-4 pb-4 border-bottom"> <!-- Productos * -->
-          <div class="media d-block d-sm-flex text-center text-sm-left">
-            <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img
-                src="img/example240x240.jpeg" alt="Product"></a>
-            <div class="media-body pt-3">
-              <h3 class="product-card-title font-weight-semibold border-0 pb-0">
-                <a href="#">Hauman</a>
-              </h3>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Litros:</span>20
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Color:</span>Racismo
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Terminación:</span>De tu casa
-              </div>
-              <div class="font-size-lg text-primary pt-2">$15.00</div>
-            </div>
-          </div>
-          <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem">
-            <div class="form-group mb-2">
-              <label for="quantity1">Cantidad</label>
-              <input class="form-control form-control-sm" type="number" id="quantity1" value="1" />
-            </div>
-            <button class="btn btn-outline-secondary btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-refresh-cw mr-1">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>Añadir al carrito
-            </button>
-            <button class="btn btn-outline-danger btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-trash-2 mr-1">
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                <line x1="10" y1="11" x2="10" y2="17"></line>
-                <line x1="14" y1="11" x2="14" y2="17"></line>
-              </svg>Eliminar
-            </button>
-          </div>
-        </div> <!-- * Productos -->
-        <div class="d-sm-flex justify-content-between my-4 pb-4 border-bottom"> <!-- Productos * -->
-          <div class="media d-block d-sm-flex text-center text-sm-left">
-            <a class="cart-item-thumb mx-auto mr-sm-4" href="#"><img
-                src="img/example240x240.jpeg" alt="Product"></a>
-            <div class="media-body pt-3">
-              <h3 class="product-card-title font-weight-semibold border-0 pb-0">
-                <a href="#">Hauman</a>
-              </h3>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Litros:</span>20
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Color:</span>Racismo
-              </div>
-              <div class="font-size-sm">
-                <span class="text-muted mr-2">Terminación:</span>De tu casa
-              </div>
-              <div class="font-size-lg text-primary pt-2">$15.00</div>
-            </div>
-          </div>
-          <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem">
-            <div class="form-group mb-2">
-              <label for="quantity1">Cantidad</label>
-              <input class="form-control form-control-sm" type="number" id="quantity1" value="1" />
-            </div>
-            <button class="btn btn-outline-secondary btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-refresh-cw mr-1">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>Añadir al carrito
-            </button>
-            <button class="btn btn-outline-danger btn-sm btn-block mb-2" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-trash-2 mr-1">
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                <line x1="10" y1="11" x2="10" y2="17"></line>
-                <line x1="14" y1="11" x2="14" y2="17"></line>
-              </svg>Eliminar
-            </button>
-          </div>
-        </div> <!-- * Productos -->
+  <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+    Producto Añadido al carrito!
+  </div>
+  <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+    Producto removido!
+  </div>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <h1>Uso de Fetch y APIs</h1>
+      <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="data">
+          </tbody>
+        </table>
       </div>
-      <!-- Sidebar-->
-      <div class="col-xl-3 col-md-4 pt-3 pt-md-0">
-        <h2 class="h6 px-4 py-3 bg-secondary text-center">Subtotal</h2>
-        <div class="h3 font-weight-semibold text-center py-3">$0.00</div>
-        <hr />
-        <h3 class="h6 pt-4 font-weight-semibold">
-          <span class="badge badge-success mr-2">Notas</span> Añade un comentario a tu orden de compra
-        </h3>
-        <textarea class="form-control mb-3" id="order-comments" rows="5"></textarea>
-        <a class="btn btn-primary btn-block" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-credit-card mr-2">
-            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-            <line x1="1" y1="10" x2="23" y2="10"></line>
-          </svg>Realizar el pago</a>
-        <div class="pt-4">
-          <div class="accordion" id="cart-accordion">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="accordion-heading font-weight-semibold">
-                  <a class="collapsed" href="#shipping" role="button" data-toggle="collapse" aria-expanded="true"
-                    aria-controls="shipping">Costos de Envio<span class="accordion-indicator"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-chevron-up">
-                        <polyline points="18 15 12 9 6 15"></polyline>
-                      </svg></span></a>
-                </h3>
+    </div>
+    <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel"
+      aria-labelledby="pills-profile-tab">
+      <h2 class="h4 m-4 text-primary">Productos</h2>
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 1</h5>
+            <img src="./img/platillo1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 1</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
               </div>
-              <div class="collapse" id="shipping" data-parent="#cart-accordion">
-                <div class="card-body">
-                  <form class="needs-validation" novalidate="">
-                    <div class="form-group">
-                      <select class="form-control custom-select" required="">
-                        <option value="">Selecciona tu localidad</option>
-                        <option value="San Miguel">San Miguel</option>
-                        <option value="Muñiz">Muñiz</option>
-                        <option value="Bella Vista">Bella Vista</option>
-                        <option value="José C. Paz">José C. Paz</option>
-                        <option value="Pilar">Pilar</option>
-                        <option value="Hurlingam">Hurlingam</option>
-                      </select>
-                      <div class="invalid-feedback">
-                        Por favor, seleccione una Localidad
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Codigo Postal" required="" />
-                      <div id="#codigoPostal" ></div>
-                      <div class="invalid-feedback">
-                        Por favor, ingrese un codigo postal
-                      </div>
-                    </div>
-                    <button class="btn btn-outline-primary btn-block" type="submit">
-                      Calcular Precio
-                    </button>
-                  </form>
-                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 2</h5>
+            <img src="./img/platillo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 2</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 3</h5>
+            <img src="./img/platillo3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 3</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 4</h5>
+            <img src="./img/platillo4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 4</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 5</h5>
+            <img src="./img/platillo5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 5</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 6</h5>
+            <img src="./img/platillo1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 6</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 7</h5>
+            <img src="./img/platillo2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 7</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 8</h5>
+            <img src="./img/platillo3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-white-50 description">Descripción 8</p>
+              <h5 class="text-primary">Precio: <span class="precio">$ 5</span></h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Añadir a Carrito</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        </a>
-        <span class="mb-3 mb-md-0 text-muted">&copy; Gianfranco Malzone</span>
+    <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <br>
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal text-black">Total: 0.00</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">COMPRAR</button>
+        </div>
       </div>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="text-muted" href="#"></a>
-        </li>
-        <li class="ms-3">
-          <a class="text-muted" href="#"></a>
-        </li>
-        <li class="ms-3">
-          <a class="text-muted" href="#"></a>
-        </li>
-      </ul>
-    </footer>
+    </div>
   </div>
+  <footer class="bg-dark text-center text-white">
+    <a class="btn btn-outline-light btn-floating m-1" href="mailto:gianfrancomalzone.gm@gmail.com" role="button"><img src="./img/email-svgrepo-com.svg"
+        alt="" width="24px" height="24px"></a>
+    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/gianfranco-malzone-7b2317242/" role="button"><img src="./img/linkedin-svgrepo-com.svg"
+        alt=""></a>
+    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/gianfrancomalzone" role="button"><img src="./img/github-svgrepo-com.svg"
+        alt=""></a>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+  </script>
+  <script src="./js/scripts.js"></script>
 </body>
-
-<script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
 
 </html>
