@@ -1,9 +1,4 @@
-# Projecto utilizado en el curso de Java Script en la carrera de Full Stack Developer.
+En este proyecto no me enfoco en la estética sino en la funcionalidad, basado en JS. En este mismo explore tanto el uso de APIs, carrito de compras y landing pages.
+Para este proyecto experimente con el tipo de pagina landing page, con el objetivo de no crear varios archivos html. No utilice la herramienta que proporciona SASS ya que no es el objetivo que sea visualmente atractivo, ya que en esta ocasión solo me enfoque en JavaScript.
 
-Soy Gianfranco Malzone, tengo 17 años, estoy cursando mi ultimo año de secundario y estoy trabajando como auxiliar contable.
-
-El projecto se basa en un carrito de compras, interactivo y de una sola pagina para evitar redireccionar. Debido a no tener una idea clara de que es lo que queria entregar como projecto final tuve que rediseñarlo a ultimo momento para estar satifactorio con el resultado.
-
-Sin mas que aclarar, saludos cordiales.
-
-eMail de contacto: gianfrancomalzone.gm@gmail.com
+Link de la Pagina: https://gianfrancomalzone.github.io/JSMalzone33975/
